@@ -1,0 +1,32 @@
+export const REQUEST_TYPE = {
+  POST: 'POST',
+  GET: 'GET',
+  PUT: 'PUT',
+  DELETE: 'DELETE',
+  PATCH: 'PATCH',
+}
+
+export const OBSERVER_KEY = {
+  SIGN_IN: 'SIGN_IN',
+  SIGN_IN_DRAWER: 'SIGN_IN_DRAWER',
+  ALREADY_SIGNED: 'ALREADY_SIGNED',
+  CHANGED_ACCOUNT: 'CHANGED_ACCOUNT',
+  RESET_UPLOAD: 'RESET_UPLOAD',
+  CARD_RELOAD: 'CARD_RELOAD',
+}
+
+export const KEY_STORE = {
+  SET_LANGUAGE: 'SET_LANGUAGE',
+  SET_USER: 'SET_USER',
+  SET_SETTING: 'SET_SETTING',
+  USER_SIGN: 'USER_SIGN',
+  USER_ADMIN: 'USER_ADMIN',
+  DEV_MODE: 'DEV_MODE',
+}
+
+export const ZINDEX = {
+  MODAL: 1000,
+}
+// TODO: fix after paginate
+export const PAGE_LIMIT = 1000
+export const MAX_BUY = 50
