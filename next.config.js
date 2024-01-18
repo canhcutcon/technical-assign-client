@@ -28,10 +28,15 @@ const nextConfig = {
   },
   cleanDistDir: false,
   webpack(config) {
-    config.module.rules[3].oneOf.forEach((one) => {
-      if (!`${one.issuer?.and}`.includes('_app')) return
-      one.issuer.and = [path.resolve(__dirname)]
-    })
+    const oneOfRule = config.module.rules[3]
+
+    if (oneOfRule && oneOfRule.oneOf) {
+      oneOfRule.oneOf.forEach((one) => {
+        if (!`${one.issuer?.and}`.includes('_app')) return
+        one.issuer.and = [path.resolve(__dirname)]
+      })
+    }
+
     return config
   },
   async rewrites() {

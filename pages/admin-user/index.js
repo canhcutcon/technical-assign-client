@@ -59,16 +59,16 @@ const UserAdmin = () => {
     deleteUserAdmin.mutate(record?._id)
   }
 
-  const handleCreate = (record) => {
-    openModal({
-      content: <CreateUserAdmin data={record} />,
-      header: true,
-      headerTitle: record ? 'Update User Admin Info' : 'Create User Admin',
-      width: '550px',
-      radius: '10px',
-      boxShadow: '0 2px 42px 0 rgba(31, 38, 145, 0.37)',
-    })
-  }
+  // const handleCreate = (record) => {
+  //   openModal({
+  //     content: <CreateUserAdmin data={record} />,
+  //     header: true,
+  //     headerTitle: record ? 'Update User Admin Info' : 'Create User Admin',
+  //     width: '550px',
+  //     radius: '10px',
+  //     boxShadow: '0 2px 42px 0 rgba(31, 38, 145, 0.37)',
+  //   })
+  // }
 
   const columns = [
     {
@@ -115,11 +115,11 @@ const UserAdmin = () => {
         dataSource={data.items}
         loading={isLoading}
         onChange={(page, limit) => onChangeQuery({ page, limit })}
-        extra={
-          <PrimaryButton onClick={() => handleCreate()} size='small'>
-            Create
-          </PrimaryButton>
-        }
+        // extra={
+        // <PrimaryButton onClick={() => handleCreate()} size='small'>
+        //   Create
+        // </PrimaryButton>
+        // }
       />
     </Container>
   )
